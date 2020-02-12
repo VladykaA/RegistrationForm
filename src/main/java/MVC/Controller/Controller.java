@@ -3,6 +3,7 @@ package MVC.Controller;
 import MVC.View.View;
 import MVC.Model.Model;
 import User.User;
+
 import static Util.ResourceUtil.*;
 
 import java.util.Scanner;
@@ -21,19 +22,31 @@ public class Controller {
     public void execute() {
         user = new User();
         registrationOfTheUser();
+        view.print(model.userList);
     }
 
     private void registrationOfTheUser() {
         view.print(WELCOME_AND_LOGIN);
         while (SCANNER.hasNext()) {
-            validateInput(SCANNER.next());
+            String input = SCANNER.next();
+            if (!input.isEmpty() && model.matchingLoginName(input)) {
+                user.setLoginName(input);
+                view.print(LAST_NAME);
+            } else if (!input.isEmpty() && model.matchingLastNameInEnglish(input)) {
+                user.setLastName(input);
+                view.print(SUCCESS);
+                break;
+            } else if (!input.isEmpty() && model.matchingLastNameInUkrainian(input)) {
+                user.setLastName(input);
+                view.print(SUCCESS);
+                break;
+            } else {
+                view.print(WRONG_INPUT);
+            }
             SCANNER.next();
         }
-    }
-
-    private void validateInput(String input) {
-        if (!input.isEmpty() && model.matchingLoginName(input)) {
-            user.setLoginName(input);
-        }view.print(WRONG_INPUT);
+        model.savingUserToList(user);
     }
 }
+
+

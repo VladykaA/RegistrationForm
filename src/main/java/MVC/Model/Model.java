@@ -11,7 +11,7 @@ public class Model {
 
     private Pattern pattern;
     private Matcher matcher;
-    private List<User> userList = new ArrayList<>();
+    public List<User> userList = new ArrayList<>();
 
     public Model() {
     }
