@@ -1,4 +1,4 @@
-package MVC.View;
+package mvc.view;
 
 public interface TextConstant {
     String WRONG_INPUT_DATA = "input.wrong.data";
@@ -19,5 +19,7 @@ public interface TextConstant {
     String INPUT_STREET = "input.street.data";
     String INPUT_STREET_NUMBER = "input.street_number.data";
     String INPUT_APARTMENT_NUMBER = "input.apartment_number.data";
+
+    static String MESSAGE_BUNDLE_NAME = "messages";
 
 }

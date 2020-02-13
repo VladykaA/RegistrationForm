@@ -1,4 +1,4 @@
-package MVC.Model.User;
+package mvc.model.user;
 
 public class User {
 

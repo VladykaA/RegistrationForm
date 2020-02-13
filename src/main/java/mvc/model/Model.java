@@ -1,6 +1,6 @@
-package MVC.Model;
+package mvc.model;
 
-import MVC.Model.User.User;
+import mvc.model.user.User;
 import java.util.ArrayList;
 import java.util.List;
 

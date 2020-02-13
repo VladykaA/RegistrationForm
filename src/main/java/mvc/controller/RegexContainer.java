@@ -1,4 +1,4 @@
-package MVC.controller;
+package mvc.controller;
 
 public interface RegexContainer {
     // Cyrillic name
