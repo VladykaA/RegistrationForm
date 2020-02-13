@@ -1,4 +1,4 @@
-package MVC.Controller;
+package MVC.controller;
 
 import MVC.View.View;
 

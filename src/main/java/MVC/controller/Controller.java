@@ -1,4 +1,4 @@
-package MVC.Controller;
+package MVC.controller;
 
 import MVC.View.View;
 import MVC.Model.Model;
@@ -7,11 +7,9 @@ import java.util.Scanner;
 
 public class Controller {
 
-    private Model model;
     private View view;
 
     public Controller(Model model, View view) {
-        this.model = model;
         this.view = view;
     }
 
@@ -19,7 +17,6 @@ public class Controller {
         Scanner scanner = new Scanner(System.in);
         InputNoteBook inputNoteBook = new InputNoteBook(view, scanner);
         inputNoteBook.inputNote();
-
     }
 }
 
