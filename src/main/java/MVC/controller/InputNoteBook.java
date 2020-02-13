@@ -4,6 +4,8 @@ import MVC.Model.User.Address;
 import MVC.Model.User.User;
 import MVC.View.View;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 import static MVC.View.TextConstant.LAST_NAME;
@@ -30,5 +32,13 @@ public class InputNoteBook {
 
         user.setLastName(controller.inputStringValueWithScanner(LAST_NAME, str));
         user.setLogin(controller.inputStringValueWithScanner(LOGIN_DATA, REGEX_LOGIN));
+    }
+
+
+    private void saveDateOfCreation() {
+        Date date = new Date();
+        String pattern = "dd.MM.yyyy hh:mm";
+        SimpleDateFormat simpleDate = new SimpleDateFormat(pattern);
+        user.setDateOfCreation(simpleDate.format(date));
     }
 }

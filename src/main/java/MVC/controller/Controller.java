@@ -17,6 +17,7 @@ public class Controller {
         Scanner scanner = new Scanner(System.in);
         InputNoteBook inputNoteBook = new InputNoteBook(view, scanner);
         inputNoteBook.inputNote();
+
     }
 }
 
