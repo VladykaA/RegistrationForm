@@ -128,4 +128,5 @@ public class User {
     public void setDateOfUpdate(String dateOfUpdate) {
         this.dateOfUpdate = dateOfUpdate;
     }
+
 }
