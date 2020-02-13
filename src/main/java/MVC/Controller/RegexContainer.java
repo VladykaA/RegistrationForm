@@ -1,6 +1,6 @@
 package MVC.Controller;
 
-public class RegexContainer {
+public interface RegexContainer {
     // Cyrillic name
     String REGEX_NAME_UKR = "^[А-ЩЮЯҐІЇЄ][а-щьюяґіїє']{1,20}$";
     // Latin name
